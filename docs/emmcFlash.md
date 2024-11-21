@@ -4,11 +4,11 @@
 1. Install the Raspberry Pi Imager and insert a USB Flash Drive into your PC.
 2. Select **Choose Device** -> **Raspberry Pi 4**.
 
-   ![Raspberry Pi Imager - Device Selection](/docs/images/rpiImager1.png)
+   ![Raspberry Pi Imager - Device Selection](/images/rpiImager1.png)
 
 3. Select **Choose OS** -> **Raspberry Pi OS (other)** -> **Raspberry Pi OS Lite (64-bit)**.
 
-   ![Raspberry Pi Imager - OS Selection](/docs/images/rpiImager2.png)
+   ![Raspberry Pi Imager - OS Selection](/images/rpiImager2.png)
 
 4. Select **Choose Storage** -> your USB flash drive.
 
