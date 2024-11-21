@@ -8,29 +8,29 @@
 
 3. Select **Choose OS** -> **Raspberry Pi OS (other)** -> **Raspberry Pi OS Lite (64-bit)**.
 
-   ![Raspberry Pi Imager - OS Selection](/images/rpiImager2.png)
+   ![Raspberry Pi Imager - OS Selection](/docs/images/rpiImager2.png)
 
 4. Select **Choose Storage** -> your USB flash drive.
 
-   ![Raspberry Pi Imager - Storage Selection](/images/rpiImager3.png)
+   ![Raspberry Pi Imager - Storage Selection](/docs/images/rpiImager3.png)
 
 5. Click **Next** and then **Edit Settings**.
    - Select the **General** tab and configure the hostname, username, password, and locale.
 
-   ![Raspberry Pi Imager - General Settings](/images/rpiImager5.png)
+   ![Raspberry Pi Imager - General Settings](/docs/images/rpiImager5.png)
 
 6. Select the **Services** tab, enable **SSH**, and choose **Use password authentication**.
    - Click **Save**.
 
-   ![Raspberry Pi Imager - Services Settings](/images/rpiImager6.png)
+   ![Raspberry Pi Imager - Services Settings](/docs/images/rpiImager6.png)
 
 7. Click **Yes** when prompted to apply customization settings.
 
-   ![Customization Confirmation](/images/rpiImager7.png)
+   ![Customization Confirmation](/docs/images/rpiImager7.png)
 
 8. Note the warning message, and if you agree, select **Yes**.
 
-   ![Customization Warning](/images/rpiImager8.png)
+   ![Customization Warning](/docs/images/rpiImager8.png)
 
 ---
 
@@ -38,13 +38,13 @@
 
 1. Install the CM4 module into **Node 1** and insert the prepared USB flash drive into the Turing Pi's USB-2 port.
 
-   ![CM4 Installation](/images/TPi1.png)
+   ![CM4 Installation](/docs/images/TPi1.png)
 
 2. If you have the newer Turing Pi V2.5.x board:
    - Log in to [https://turingpi.local](https://turingpi.local).
    - Select **Node 1 USB-A Compatibility Mode** and click **Change**.
 
-   ![USB Compatibility Mode](/images/USBComp.png)
+   ![USB Compatibility Mode](/docs/images/USBComp.png)
 
 ---
 
@@ -58,7 +58,7 @@
    https://downloads.raspberrypi.com/raspios_armhf/images/raspios_armhf-2024-11-19/2024-11-19-raspios-bookworm-armhf.img.xz
    ```
 
-   ![OS Download URL](/images/osURL.png)
+   ![OS Download URL](/docs/images/osURL.png)
 
 ---
 
@@ -77,7 +77,7 @@
    tpi power on -n1
    ```
 
-   ![SSH Command](/images/ssh7.png)
+   ![SSH Command](/docs/images/ssh7.png)
 
 3. Wait for the system to start and expand the OS partition. Then, SSH into the Raspberry Pi using the hostname, username, and password you configured earlier:
 
@@ -93,7 +93,7 @@
    wget https://downloads.raspberrypi.com/raspios_armhf/images/raspios_armhf-2024-11-19/2024-11-19-raspios-bookworm-armhf.img.xz
    ```
 
-   ![Download Image](/images/ssh1.png)
+   ![Download Image](/docs/images/ssh1.png)
 
 5. Unarchive the downloaded image using `unxz` (this may take a while):
 
@@ -101,7 +101,7 @@
    unxz 2024-11-19-raspios-bookworm-armhf.img.xz
    ```
 
-   ![Unarchive Image](/images/ssh2.png)
+   ![Unarchive Image](/docs/images/ssh2.png)
 
 6. Check storage disks and partitions. `sda` represents the USB flash drive, and `mmcblk0` is the eMMC storage:
 
@@ -109,7 +109,7 @@
    lsblk
    ```
 
-   ![Storage Disks](/images/ssh3.png)
+   ![Storage Disks](/docs/images/ssh3.png)
 
 7. Write the image to the CM4's eMMC using `dd` (grab another coffee):
 
@@ -117,7 +117,7 @@
    sudo dd if=2024-11-19-raspios-bookworm-armhf.img of=/dev/mmcblk0 bs=10MB
    ```
 
-   ![Flash Image](/images/ssh4.png)
+   ![Flash Image](/docs/images/ssh4.png)
 
 ---
 
@@ -130,7 +130,7 @@
      lsblk
      ```
 
-     ![Partitions](/images/ssh5.png)
+     ![Partitions](/docs/images/ssh5.png)
 
 2. Create and mount the boot drive:
 
@@ -172,7 +172,7 @@
    tpi power off -n1
    ```
 
-   ![Shutdown Node](/images/ssh6.png)
+   ![Shutdown Node](/docs/images/ssh6.png)
 
 7. Remove the USB flash drive, then power on Node 1:
 
@@ -180,7 +180,7 @@
    tpi power on -n1
    ```
 
-   ![Power On Node](/images/ssh7.png)
+   ![Power On Node](/docs/images/ssh7.png)
 
 ---
 
@@ -199,7 +199,7 @@
    ssh-keygen -f ~/.ssh/known_hosts -R raspberrypi.local
    ```
 
-   ![SSH Key Error](/images/ssh10.png)
+   ![SSH Key Error](/docs/images/ssh10.png)
 
 3. Once logged in, confirm eMMC storage (`mmcblk0`) and its partitions (`mmcblk0p1`, `mmcblk0p2`):
 
@@ -207,4 +207,4 @@
    lsblk
    ```
 
-   ![eMMC Partitions](/images/ssh11.png)
+   ![eMMC Partitions](/docs/images/ssh11.png)
