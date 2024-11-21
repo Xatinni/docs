@@ -1,4 +1,4 @@
-
+<!-- /docs/emmcFlash.md -->
 # Write Image to USB Drive
 
 1. Install the Raspberry Pi Imager and insert a USB Flash Drive into your PC.
