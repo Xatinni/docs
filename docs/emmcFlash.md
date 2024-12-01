@@ -40,12 +40,18 @@
 
    ![CM4 Installation](/images/TPi1.png)
 
-2. If you have the newer Turing Pi V2.5.x board:
+2.a If you have the newer Turing Pi V2.5.x board:
    - Log in to [https://turingpi.local](https://turingpi.local).
    - Select **Node 1 USB-A Compatibility Mode** and click **Change**.
 
    ![USB Compatibility Mode](/images/USBComp.png)
 
+2.b If you have the older Turing Pi V2.4.x board:
+   - Log in to [https://turingpi.local](https://turingpi.local).
+   - Select USB Mode: Host / Connected node: Node 1
+     Note: A little quirk was when using a newer usb3 thumb drives, they don't sometimes work. eg: on a SanDisk Cruzer Blade thumbdrive I got xHC-CMD error:4 type: 11 errors and no boot, using an older USB2 drive worked fine, I used a USB-A (USB2) to microSD card reader without issue 
+
+   ![USB Host Mode](/images/USBComp2.png)
 ---
 
 # Obtain the Raspberry Pi Download URL
