@@ -49,6 +49,7 @@
 2.b If you have the older Turing Pi V2.4.x board:
    - Log in to [https://turingpi.local](https://turingpi.local).
    - Select USB Mode: Host / Connected node: Node 1
+
      Note: A little quirk was when using a newer usb3 thumb drives, they don't sometimes work. eg: on a SanDisk Cruzer Blade thumbdrive I got xHC-CMD error:4 type: 11 errors and no boot, using an older USB2 drive worked fine, I used a USB-A (USB2) to microSD card reader without issue 
 
    ![USB Host Mode](/images/USBComp2.png)
