@@ -36,7 +36,7 @@
 
 ---
 
-# Install CM4 and USB Flash Drive
+## Install CM4 and USB Flash Drive
 
 1. Install the CM4 module into **Node 1** and insert the prepared USB flash drive into the Turing Pi's USB-2 port.
 
@@ -57,7 +57,7 @@
    ![USB Host Mode](/images/USBComp2.png)
 ---
 
-# Obtain the Raspberry Pi Download URL
+## Obtain the Raspberry Pi Download URL
 
 1. Browse to [https://www.raspberrypi.com/software/operating-systems/](https://www.raspberrypi.com/software/operating-systems/) on your PC.
 2. Right-click the **Download** button and select **Copy Link** for the OS version you wish to install.
@@ -71,7 +71,7 @@
 
 ---
 
-# Boot from USB and Flash to eMMC
+## Boot from USB and Flash to eMMC
 
 1. SSH into the Turing Pi using a terminal or terminal emulator (e.g., PuTTY):
 
@@ -130,7 +130,7 @@
 
 ---
 
-# Enable SSH and the Default Pi User Account
+## Enable SSH and the Default Pi User Account
 
 1. The latest Raspberry Pi OS versions do not enable SSH or create a default user by default.
    - Verify the new partitions: `boot` (mmcblk0p1) and `os` (mmcblk0p2):
@@ -193,7 +193,7 @@
 
 ---
 
-# Logging In
+## Logging In
 
 1. SSH into the CM4:
 
