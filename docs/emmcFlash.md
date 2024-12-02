@@ -1,7 +1,7 @@
 <!-- /docs/emmcFlash.md -->
 # TuringPi - Flashing eMMC from Flash Drive
 
-# Write Image to USB Drive
+## Write Image to USB Drive
 
 1. Install the Raspberry Pi Imager and insert a USB Flash Drive into your PC.
 2. Select **Choose Device** -> **Raspberry Pi 4**.
